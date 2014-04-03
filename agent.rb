@@ -21,8 +21,7 @@ names.each do |name|
     print "\n"
     print "rating: ".green
     puts doc.css("div.star-box-giga-star").text
-    puts "description: ".green
-    puts doc.css("div.star-box-giga-star").text
+    print "description: ".green
     puts doc.css("td#overview-top").css("p").select { |p| p.attributes["itemprop"] and p.attributes["itemprop"].value == "description" }.first.text
 end
 
